@@ -1,0 +1,38 @@
+Options -indexes
+RewriteEngine On
+RewriteBase /admin/
+RewriteRule ^liste/(.*)$ index.php?sayfa=liste&tablo=$1 [NC]
+RewriteRule ^modul-ekle$ index.php?sayfa=modul-ekle [NC]
+RewriteRule ^ekle/(.*)$ index.php?sayfa=ekle&tablo=$1 [NC]
+RewriteRule ^duzenle/(.*)/(.*)$ index.php?sayfa=duzenle&tablo=$1&ID=$2 [NC]
+RewriteRule ^sil/(.*)/(.*)$ index.php?sayfa=sil&tablo=$1&ID=$2 [NC]
+RewriteRule ^seo-ayarlari$ index.php?sayfa=seo-ayarlari [NC]
+RewriteRule ^iletisim-ayarlari$ index.php?sayfa=iletisim-ayarlari [NC]
+RewriteRule ^giris-yap$ login.php [NC]
+RewriteRule ^cikis$ index.php?sayfa=cikis [NC]
+
+RewriteRule ^banner-ekle$ index.php?sayfa=banner-ekle [NC]
+RewriteRule ^banner-duzenle/(.*)$ index.php?sayfa=banner-duzenle&ID=$1 [NC]
+RewriteRule ^banner-liste$ index.php?sayfa=banner-liste [NC]
+RewriteRule ^banner-sil/(.*)$ index.php?sayfa=banner-sil&ID=$1 [NC]
+
+RewriteRule ^kategori-liste$ index.php?sayfa=kategori-liste [NC]
+RewriteRule ^kategori-ekle$ index.php?sayfa=kategori-ekle [NC]
+RewriteRule ^kategori-duzenle/(.*)$ index.php?sayfa=kategori-duzenle&ID=$1 [NC]
+RewriteRule ^kategori-sil/(.*)$ index.php?sayfa=kategori-sil&ID=$1 [NC]
+
+
+RewriteRule ^mesajlar$ index.php?sayfa=mesajlar [NC]
+RewriteRule ^mesaj-detay/(.*)$ index.php?sayfa=mesaj-detay&ID=$1 [NC]
+
+RewriteRule ^resimler/(.*)/(.*)$ index.php?sayfa=resimler&tablo=$1&ID=$2 [NC]
+RewriteRule ^resim-sil/(.*)/(.*)/(.*)$ index.php?sayfa=resim-sil&tablo=$1&ID=$2&silinecekID=$3 [NC]
+
+
+RewriteRule ^yorumlar$ index.php?sayfa=yorumlar [NC]
+RewriteRule ^yorum-detay/(.*)$ index.php?sayfa=yorum-detay&ID=$1 [NC]
+
+RewriteRule ^fakulte-ekle$ index.php?sayfa=fakulte-ekle [NC]
+RewriteRule ^fakulte-duzenle/(.*)$ index.php?sayfa=fakulte-duzenle&ID=$1 [NC]
+RewriteRule ^fakulte-liste$ index.php?sayfa=fakulte-liste [NC]
+RewriteRule ^fakulte-sil/(.*)$ index.php?sayfa=fakulte-sil&ID=$1 [NC]
